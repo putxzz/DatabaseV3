@@ -1050,7 +1050,7 @@ bot.command("clearbug", checkWhatsAppconnection, checkPremium, async ctx => {
 bot.command("update", async (ctx) => {
   const chatId = ctx.chat.id;
   const repoRaw =
-    "https://raw.githubusercontent.com/Putraahere/DatabaseV3/main/KultusX.js";
+    "https://raw.githubusercontent.com/Putraahere/DatabaseV3/main/index.js";
 
   await ctx.reply("⏳ Sedang mengecek update...");
 
@@ -1061,7 +1061,7 @@ bot.command("update", async (ctx) => {
       return ctx.reply("❌ Update gagal: File kosong!");
     }
 
-    fs.writeFileSync("./KultusX.js", data);
+    fs.writeFileSync("./index.js", data);
 
     await ctx.reply("✅ Update berhasil!\nSilakan restart bot.");
 
